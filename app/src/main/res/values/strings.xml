@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">HelloWorld</string>
     <string name="action_settings">Settings</string>
+    <string name="hike">Day Hike</string>
+    <string name="distance_type1">6.2 miles roundtrip</string>
+    <string name="distance_type2">8.6 miles roundtrip</string>
+    <string name="distance_gain">ft gain</string>
+    <string name="ft">ft</string>
+    <string name="date1">09/27/2015</string>
+    <string name="date2">09/25/2015</string>
+    <string name="hp1">1220ft gain (highest point 3780ft)</string>
+    <string name="hp2">3800ft gain (highest point 5629ft)</string>
+    <string name="wta">WTA.ORG</string>
+    <string name="Talapus">Talapus and Olallie Lakes</string>
+    <string name="Granite">Granite Mountain</string>
 </resources>
