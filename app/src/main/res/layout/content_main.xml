@@ -1,46 +1,81 @@
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="0dp"
-    android:paddingRight="0dp"
-    android:paddingTop="0dp"
-    android:paddingBottom="0dp"
-    android:orientation="vertical">
-
-    <ImageView
-        android:src="@drawable/androidocean"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:scaleType="centerCrop"
-        />
-
-    <TextView
-        android:text="You're invited!"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
-        android:paddingLeft="16dp"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:textSize="45sp"
-        android:background="#009688"/>
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+    android:paddingBottom="16dp"
+    android:paddingRight="16dp"
+    >
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@android:color/white"/>
+        android:background="@android:color/black"
+        android:id="@+id/verticalLine"
+        />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_alignParentBottom="true"
+        />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+
+        />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/black"
+
+
+        />
+
+    <ImageView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/androidocean"
+        android:id="@+id/pic"
+        />
 
     <TextView
-        android:text="Bonfire at the beach"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/white"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
-        android:paddingLeft="16dp"
-        android:textSize="24sp"
-        android:background="#009688"/>
+        android:text="Pebble Beach"
+        android:layout_marginTop="4dp"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/pic"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:id="@+id/Pebs"
+        />
 
-</LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="California"
+        android:layout_toRightOf="@id/pic"
+        android:layout_below="@id/Pebs"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:id="@+id/Cali"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 miles away"
+        android:layout_below="@id/Cali"
+        android:layout_toRightOf="@id/pic"
+        android:textAppearance="?android:textAppearanceSmall" />
+
+</RelativeLayout>
