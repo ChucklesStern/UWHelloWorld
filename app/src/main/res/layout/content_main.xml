@@ -1,43 +1,46 @@
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    android:orientation="vertical">
 
     <ImageView
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+        android:src="@drawable/androidocean"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:scaleType="centerCrop"
-        android:src="@mipmap/yummyCake"
-        android:id="@+id/picture"
         />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:text="You're invited!"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pebble Beach"
-        android:layout_toRightOf="@id/picture"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:id="@+id/pebs"
-        />
+        android:textColor="@android:color/white"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:textSize="45sp"
+        android:background="#009688"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/white"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:text="Bonfire at the beach"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/pebs"
-        android:layout_toRightOf="@id/picture"
-        android:text="California"
-        android:textAppearance="?android:textAppearanceSmall"
-        android:id="@+id/Cali"
-        />
+        android:textColor="@android:color/white"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:textSize="24sp"
+        android:background="#009688"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="10 miles away"
-        android:layout_below="@id/Cali"
-        android:layout_toRightOf="@id/picture"
-        android:textAppearance="?android:textAppearanceSmall"
-        android:id="@+id/miles"
-        />
-
-</RelativeLayout>
+</LinearLayout>
