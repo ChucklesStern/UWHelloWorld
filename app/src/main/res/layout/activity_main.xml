@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.android.helloworld.MainActivity">
+    tools:context="com.example.android.helloworld.MainActivity"
+    android:id="@+id/toolbarLayout"
+    >
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -22,16 +24,52 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:paddingLeft="16dp"
+        >
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon"
+            android:onClick="sendMessage"
+            android:id="@+id/Imagebutton"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alarm"
+            android:onClick="sendMessage"
+            android:id="@+id/button"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alarm"
+            android:drawableLeft="@drawable/icon"
+            android:onClick="sendMessage"
+            android:id="@+id/button2"
+            />
+    </LinearLayout>
+
     <include layout="@layout/content_main" />
 
 
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/mailWidget"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:srcCompat="@android:drawable/ic_dialog_email"
+        android:onClick="sendEmail"
+        />
 
 </android.support.design.widget.CoordinatorLayout>
