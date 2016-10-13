@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         String[] TO = {""};
         String[] CC = {""};
+        //The defined Common intent lets Android know what type of new app to open and pass data to
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
 
         emailIntent.setData(Uri.parse("mailto:"));
