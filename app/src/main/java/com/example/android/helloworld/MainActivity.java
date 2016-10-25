@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.mailWidget);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +75,14 @@ public class MainActivity extends AppCompatActivity {
         String showId = view.getResources().getResourceName(view.getId());
         Toast.makeText(MainActivity.this, showId, Toast.LENGTH_SHORT).show();
 
+        Intent explicitIntent = new Intent(MainActivity.this, SecondActivity.class);
+
+        Bundle b = new Bundle();
+        b.putString("Name", "Chuck");
+
+        explicitIntent.putExtras(b);
+
+        startActivity(explicitIntent);
 
     }
 
