@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     protected void sendEmail() {
 
+
         String[] TO = {""};
         String[] CC = {""};
         //The defined Common intent lets Android know what type of new app to open and pass data to
@@ -58,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         catch (android.content.ActivityNotFoundException ex) {
             Toast.makeText(MainActivity.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
         }
+
     }
 
 
@@ -68,9 +70,16 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    public void startThirdActivity(View view) {
+        Log.v("Hey!", "Third Activity Activate!");
+
+        Intent explicitIntent3 = new Intent(MainActivity.this, ThirdActivity.class);
+
+        startActivity(explicitIntent3);
+    }
 
     public void sendMessage (View view){
-    Log.e("Hey!", "Button Pressed!");
+    Log.v("Hey!", "Button Pressed!");
         //This syntax is useful for debugging as it enables us to acquire ID of the clicked object
         String showId = view.getResources().getResourceName(view.getId());
         Toast.makeText(MainActivity.this, showId, Toast.LENGTH_SHORT).show();

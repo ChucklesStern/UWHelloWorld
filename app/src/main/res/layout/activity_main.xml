@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:text="Alarm"
             android:drawableLeft="@drawable/icon"
-            android:onClick="sendMessage"
+            android:onClick="startThirdActivity"
             android:id="@+id/button2"
             />
     </LinearLayout>

@@ -5,7 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.TextView;
+
 
 /**
  * Created by root on 10/24/16.
@@ -31,6 +34,15 @@ public class SecondActivity extends AppCompatActivity {
         TextView tv = (TextView)findViewById(R.id.SecondA_0);
 
         tv.setText(b.getString("Name"));
+
+        AutoCompleteTextView textView = (AutoCompleteTextView) findViewById(R.id.autocomplete_country);
+
+        String [] countries = getResources().getStringArray(R.array.countries_array);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, countries);
+
+        textView.setAdapter(adapter);
+
     }
 
     @Override
@@ -39,6 +51,8 @@ public class SecondActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu2);
         return true;
     }
+
+
 
 
 }
