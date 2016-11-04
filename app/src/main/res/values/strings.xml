@@ -24,5 +24,10 @@
         <item>Antarctica</item>
         ...
     </string-array>
+    <string name="Feature1">My First Checkbox</string>
+    <string name="Feature2">My Second Checkbox</string>
+    <string name="ToggleText">Toggle Button</string>
+    <string name="ToggleOn">Text On</string>
+    <string name="ToggleOff">Text Off</string>
 
 </resources>
