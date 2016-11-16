@@ -95,6 +95,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void startFourth(View view) {
+        Toast.makeText(MainActivity.this, "Starting Fourth", Toast.LENGTH_SHORT).show();
+
+        Intent explicitIntent4 = new Intent(MainActivity.this, FourthActivity.class);
+
+        startActivity(explicitIntent4);
+    }
 
 
     @Override

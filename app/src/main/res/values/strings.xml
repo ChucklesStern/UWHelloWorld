@@ -29,5 +29,11 @@
     <string name="ToggleText">Toggle Button</string>
     <string name="ToggleOn">Text On</string>
     <string name="ToggleOff">Text Off</string>
+    <string name="title_activity_fourth">FourthActivity</string>
+    <string-array name="phonetype_array">
+    <item>Home</item>
+        <item>Mobile</item>
+        <item>Fax</item>
+    </string-array>
 
 </resources>

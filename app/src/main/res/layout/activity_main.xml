@@ -43,8 +43,8 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Alarm"
-            android:onClick="sendMessage"
+            android:text="4th Activity"
+            android:onClick="startFourth"
             android:id="@+id/button"
             />
 
