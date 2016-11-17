@@ -38,6 +38,7 @@ public class FourthActivity extends AppCompatActivity implements OnItemSelectedL
         //Create Array adapter to instantiate string array into view
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.phonetype_array, R.layout.support_simple_spinner_dropdown_item);
 
+
         Spinner spinner = (Spinner) findViewById(R.id.uxPhoneTypeSpinner);
         spinner.setAdapter(adapter);
 
@@ -54,7 +55,7 @@ public class FourthActivity extends AppCompatActivity implements OnItemSelectedL
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
-        @Override
+
         public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
             String item = (String) parent.getItemAtPosition(pos);
             Toast.makeText(this, "onItemSelected: " + item, Toast.LENGTH_SHORT).show();

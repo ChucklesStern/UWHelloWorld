@@ -56,6 +56,16 @@
             android:onClick="startThirdActivity"
             android:id="@+id/button2"
             />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/act5Button"
+            android:onClick="startFifth"
+            android:id="@+id/button5"
+
+
+            />
     </LinearLayout>
 
     <include layout="@layout/content_main" />

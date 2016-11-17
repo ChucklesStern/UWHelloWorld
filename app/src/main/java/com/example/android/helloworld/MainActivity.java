@@ -103,6 +103,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(explicitIntent4);
     }
 
+    public void startFifth(View view) {
+        Toast.makeText(MainActivity.this, "Starting Fifth", Toast.LENGTH_SHORT).show();
+
+        Intent explicitIntent5 = new Intent(MainActivity.this, Main5Activity.class);
+
+        startActivity(explicitIntent5);
+    }
 
     @Override
     protected void onStart() {

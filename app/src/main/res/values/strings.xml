@@ -31,9 +31,11 @@
     <string name="ToggleOff">Text Off</string>
     <string name="title_activity_fourth">FourthActivity</string>
     <string-array name="phonetype_array">
-    <item>Home</item>
+        <item>Home</item>
         <item>Mobile</item>
         <item>Fax</item>
     </string-array>
+    <string name="act5Button">Activity 5</string>
+    <string name="title_activity_main5">Main5Activity</string>
 
 </resources>

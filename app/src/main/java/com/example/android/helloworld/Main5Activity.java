@@ -1,20 +1,31 @@
 package com.example.android.helloworld;
 
+import android.app.ListActivity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
 
-public class Main5Activity extends AppCompatActivity {
+
+public class Main5Activity extends ListActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main5);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+      //  Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+     //   setSupportActionBar(toolbar);
+
+
+
+
+        ArrayAdapter<String> myadapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.countries_array));
+        getListView().setAdapter(myadapter);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -24,6 +35,13 @@ public class Main5Activity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+    }
+@Override
+    protected void onListItemClick(ListView l, View v, int position, long id) {
+        super.onListItemClick(l,v, position, id);
+        Toast.makeText(Main5Activity.this, "Item Clicked ID is: " + id, Toast.LENGTH_SHORT).show();
+
     }
 
 }
