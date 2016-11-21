@@ -30,13 +30,14 @@
         android:layout_height="match_parent"
         android:layout_marginTop="?attr/actionBarSize"
         android:paddingLeft="16dp"
+
         >
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/icon"
-            android:onClick="sendMessage"
+            android:onClick="ClickMe"
             android:id="@+id/Imagebutton"
             />
 
@@ -62,11 +63,26 @@
             android:layout_height="wrap_content"
             android:text="@string/act5Button"
             android:onClick="startFifth"
-            android:id="@+id/button5"
+            android:id="@+id/button5" />
 
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/main1">
 
+        <Button
+        android:id="@+id/uxClickMe"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Click Me"
+        android:onClick="onSettings"/>
             />
+        </LinearLayout>
     </LinearLayout>
+
+
+
 
     <include layout="@layout/content_main" />
 
@@ -81,5 +97,8 @@
         app:srcCompat="@android:drawable/ic_dialog_email"
         android:onClick="sendEmail"
         />
+
+
+
 
 </android.support.design.widget.CoordinatorLayout>

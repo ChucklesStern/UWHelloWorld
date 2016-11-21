@@ -1,5 +1,6 @@
 package com.example.android.helloworld;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -7,9 +8,13 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.PopupWindow;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -77,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(explicitIntent3);
     }
-
+/*
     public void sendMessage (View view){
     Log.v("Hey!", "Button Pressed!");
         //This syntax is useful for debugging as it enables us to acquire ID of the clicked object
@@ -94,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(explicitIntent);
 
     }
-
+*/
     public void startFourth(View view) {
         Toast.makeText(MainActivity.this, "Starting Fourth", Toast.LENGTH_SHORT).show();
 
@@ -109,6 +114,12 @@ public class MainActivity extends AppCompatActivity {
         Intent explicitIntent5 = new Intent(MainActivity.this, Main5Activity.class);
 
         startActivity(explicitIntent5);
+    }
+
+    public void onSettings (View view) {
+        Intent intent = new Intent(this, SettingsActivity.class);
+
+        startActivity(intent);
     }
 
     @Override
@@ -140,5 +151,27 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private PopupWindow pw;
+
+    public void ClickMe(View v)
+    {
+        LayoutInflater inflater = (LayoutInflater) this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        View layout = inflater.inflate(R.layout.popup_example, null, false);
+
+        Button closeButton = (Button)layout.findViewById(R.id.uxClose);
+
+        closeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pw.dismiss();
+            }
+        });
+
+        pw = new PopupWindow(layout, 100, 100);
+
+        pw.showAtLocation(this.findViewById(R.id.main1), Gravity.CENTER, 0, 0);
     }
 }
